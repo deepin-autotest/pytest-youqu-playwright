@@ -19,9 +19,12 @@ license = { text = "GPL2.0" }
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[project.entry-points.pytest11]
+pytest-mark-manage = "pytest_youqu_playwright.plugin"
+
 
 [tool.hatch]
-version = { path = "__version__.py" }
+version = { path = "pytest_youqu_playwright/__version__.py" }
 
 [tool.hatch.build.targets.wheel]
 packages = [
